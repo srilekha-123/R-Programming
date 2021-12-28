@@ -1,0 +1,13 @@
+x<-scan()
+n=0
+for( i in x)
+{
+  n=n+1
+}
+sum=0
+for(i in x)
+{
+  sum=sum+(1/i)
+}
+HM=n/sum
+cat("Harmonic mean is",HM)
