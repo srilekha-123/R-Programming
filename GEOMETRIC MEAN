@@ -1,0 +1,14 @@
+#calculating geometric mean
+x<-scan()
+n=0
+for(i in x)
+{
+  n=n+1
+}
+p=1
+for(i in x)
+{
+  p=p*i
+}
+GM=p^(1/n)
+cat("Geometric Mean is",GM)
