@@ -1,0 +1,10 @@
+#calculating mean of given data
+a=scan()
+s=0
+for(i in a)
+{
+  s=s+i
+}
+l=length(a)
+m=s/l
+cat("mean of given data is",m)
