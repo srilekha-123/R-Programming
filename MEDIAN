@@ -1,3 +1,4 @@
+print("enter the data to find median")
 v=scan()
 n=length(v)
 for (i in 1:(n-1)) {
@@ -22,3 +23,5 @@ if(n%%2==0)
   med=v[ceiling(n/2)]
   cat("Median of given data is",med)
 }
+print("median using built in function is")
+print(median(v))
