@@ -1,0 +1,30 @@
+print("enter the data to find the mode")
+x<-c(1,2,5,2,7,1,9,5,3,6,3,7,21,9,5,2,7,2,5,8)
+L=length(x)
+print("creating empty vector")
+v<-vector()
+print("counting no of times the elment present in the data")
+for(i in 1:(L-1))
+{   
+    c=0
+    for(j in (i+1):L)
+    {
+        if(x[i]==x[j])
+        {
+            c=c+1
+        }
+    }
+    v[i]<-c
+}
+print("finding mode of the given data")
+maxi=v[1]
+pos<-1
+for(i in 2:(L-1))
+{
+    if(maxi<v[i])
+    {
+        maxi=v[i]
+        pos=i
+    }
+}
+cat("mode of given data is",x[pos])
