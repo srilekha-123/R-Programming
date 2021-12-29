@@ -1,0 +1,24 @@
+x<-scan()
+print("finding maximum element")
+maximum=x[1]
+for(i in 1:length(x))
+{
+    if(maximum<x[i])
+    {
+        maximum=x[i]
+    }
+}
+print(maximum)
+print("finding minimum element")
+minimum=x[1]
+for(i in 1:length(x))
+{
+    if(minimum>x[i])
+    {
+        minimum=x[i]
+    }
+}
+print(minimum)
+Rang=maximum-minimum
+cat("range of given data is\n",Rang)
+print(range(x))
