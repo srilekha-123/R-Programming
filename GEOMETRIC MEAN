@@ -1,14 +1,17 @@
 #calculating geometric mean
+print("enter data to find the harmonic mean")
 x<-scan()
 n=0
 for(i in x)
 {
   n=n+1
 }
-p=1
+pro=1
 for(i in x)
 {
-  p=p*i
+  pro=pro*i
 }
-GM=p^(1/n)
-cat("Geometric Mean is",GM)
+GM=pro^(1/n)
+cat("Geometric Mean is\n",GM)
+print("calculating geometric mean using builtin functions is\n")
+print(exp(mean(log(x))))
