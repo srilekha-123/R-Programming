@@ -1,3 +1,4 @@
+print("enter the data to find harmonic mean")
 x<-scan()
 n=0
 for( i in x)
@@ -10,4 +11,6 @@ for(i in x)
   sum=sum+(1/i)
 }
 HM=n/sum
-cat("Harmonic mean is",HM)
+cat("Harmonic mean is\n",HM)
+print("calculating harmonic mean using builtin functions\n")
+print(1/(mean(1/x)))
