@@ -1,0 +1,2 @@
+a<-c(12,19,34,20,38,29.25)
+plot(a,type="o",main="SUPERMARKET REVENUE",xlab="month",ylab="profit",col="grey",xlim=c(1,20),ylim=c(1,40))
