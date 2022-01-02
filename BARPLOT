@@ -1,0 +1,3 @@
+h<-c(3,9,10,11,8,12,6)
+a<-c("sun","mon","tue","wed","thurs","fri","sat")
+barplot(h,names.arg=a,xlab="week",ylab="no of hours",col="red",main="working hours in a week",border="blue")
