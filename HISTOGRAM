@@ -1,0 +1,2 @@
+a<-c(19,36,28,40,1)
+hist(a,xlab="weight",col="orange",border="yellow",xlim=c(0,40))
