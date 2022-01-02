@@ -1,5 +1,5 @@
 #calculating geometric mean
-print("enter data to find the harmonic mean")
+print("enter data to find the geometric mean")
 x<-scan()
 n=0
 for(i in x)
