@@ -1,5 +1,4 @@
 x<-c(40,41,16,3)
 labels<-c("india","china","russia","america")
 pie(x,labels,main="polpulation",col=rainbow(length(x)))
-legend("topright", c("india","china","russia","america"), cex = 0.8,
-       fill = rainbow(length(x)))
+legend("topright", c("india","china","russia","america"), cex = 0.8,fill = rainbow(length(x)))
