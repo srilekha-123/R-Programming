@@ -1,0 +1,3 @@
+a<-seq(-3,3,0.1)
+y<-sin(a)
+plot(a,y,type="h")
