@@ -1,0 +1,15 @@
+x<-c(0,1,2,3,4,5,6)
+f<-c(275,72,30,7,5,2,1)
+fx<-f*x
+sumfx<-sum(fx)
+sumf<-sum(f)
+#s<-length(x)-1
+p<-sumfx/sumf
+pr<-dpois(0:6,p)
+fe<-sumf*pr
+#c<-chisq.test(f,fe)
+print(c)
+a<-data.frame(x,f,fx,pr,fe)
+sums<-c(NA,sumf,sumfx,NA,NA)
+a<-rbind(a,sums)
+print(a)
