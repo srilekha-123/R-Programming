@@ -7,9 +7,9 @@ s<-length(x)-1
 p<-sumfx/sumf/s
 pr<-dbinom(0:7,s,p)
 fe<-sumf*pr
-c<-chisq.test(f,fe)
-print(c)
 a<-data.frame(x,f,fx,pr,fe)
 sums<-c(NA,sumf,sumfx,NA,NA)
 a<-rbind(a,sums)
 print(a)
+c<-chisq.test(f,fe)
+print(c)
