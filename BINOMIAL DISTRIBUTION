@@ -7,10 +7,13 @@ sumf<-sum(f)
 s<-length(x)-1
 p<-sumfx/sumf/s
 pr<-dbinom(0:7,s,p)
-fe<-sumf*pr
-a<-data.frame(x,f,fx,pr,fe)
+fee<-sumf*pr
+fe<-round(fee,digits=0)
+a<-data.frame(x,f,fx,pr,fee,fe)
 sums<-c(NA,sumf,sumfx,NA,NA)
 a<-rbind(a,sums)
 print(a)
-c<-chisq.test(f,fe)
+c<-chisq.test(f,p=pr,rescale.p=true)
 print(c)
+tablevalue<-qchisq(.95,df=s)
+print(tablevalue)
