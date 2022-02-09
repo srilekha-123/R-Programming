@@ -7,10 +7,11 @@ sumf<-sum(f)
 s<-length(x)-1
 p<-sumfx/sumf/s
 print(p)
-pr<-dbinom(0:7,s,p)
+pr<-dbinom(0:s,s,p)
 pr<-round(pr,digits=5)
 fee<-sumf*pr
 fe<-round(fee,digits=0)
+sumfe<-sum(fe)
 a<-data.frame(x,f,fx,pr,fee,fe)
 sums<-c(NA,sumf,sumfx,NA,NA,sumfe)
 a<-rbind(a,sums)
