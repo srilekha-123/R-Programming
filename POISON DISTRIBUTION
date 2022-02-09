@@ -3,16 +3,19 @@ x<-scan()
 f<-scan()
 fx<-f*x
 sumfx<-sum(fx)
+print(sumfx)
 sumf<-sum(f)
+print(sumf)
 p<-sumfx/sumf
-s=length(x)-1
 cat("lambda value is:",p)
-pr<-dpois(0:6,p)
+s=length(x)-1
+pr<-dpois(0:s,lambda=p)
 pr<-round(pr,digits=5)
 fee<-sumf*pr
 fe<-round(fee,digits=0)
+sumfe=sum(fe)
 a<-data.frame(x,f,fx,pr,fee,fe)
-sums<-c(NA,sumf,sumfx,NA,NA)
+sums<-c(NA,sumf,sumfx,NA,NA,sumfe)
 a<-rbind(a,sums)
 print(a)
 c<-chisq.test(f,p=pr,rescale.p=TRUE)
