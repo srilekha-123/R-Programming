@@ -1,0 +1,24 @@
+print("enter data to find the poison distribution") 
+x<-scan()
+f<-scan()
+fx<-f*x
+sumfx<-sum(fx)
+print(sumfx)
+sumf<-sum(f)
+print(sumf)
+p<-sumfx/sumf
+cat("lambda value is:",p)
+s=length(x)-1
+pr<-dpois(0:s,lambda=p)
+pr<-round(pr,digits=5)
+fee<-sumf*pr
+fe<-round(fee,digits=0)
+sumfe=sum(fe)
+a<-data.frame(x,f,fx,pr,fee,fe)
+sums<-c(NA,sumf,sumfx,NA,NA,sumfe)
+a<-rbind(a,sums)
+print(a)
+c<-chisq.test(f,p=pr,rescale.p=TRUE)
+print(c)
+tablevalue<-qchisq(.95,df=s)
+print(tablevalue)
