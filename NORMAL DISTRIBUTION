@@ -1,3 +1,4 @@
+print("enter data to find normal distribution")
 x<-scan()
 y<-scan()
 f<-scan()
