@@ -1,0 +1,27 @@
+print("enter data of two means")
+x=scan()
+y=scan()
+print("enter level of significance")
+alpha=scan()
+n1=length(x)
+n2=length(y)
+xb=sum(x)/n1
+print(xb)
+yb=sum(y)/n2
+print(yb)
+sdx=sqrt((sum((x-xb)^2))/(n1-1))
+sdy=sqrt((sum((y-yb)^2))/(n2-1))
+sdc=sqrt((((n1-1)*sdx^2)+(n2-1)*sdy^2)/(n1+n2-2))
+print(sdc)
+tvalue=(xb-yb)/(sdc*sqrt((1/n1)+(1/n2)))
+print(round(tvalue,digits=4))
+t<-t.test(x,y)
+print(t)
+print("table value for two-tailed test:")
+tablevalue<-qt(1-alpha/2, df=n1+n2-2)
+print(round(tablevalue,digits=3))
+if(tvalue>tablevalue){
+  print("reject")
+}else{
+  print("accept")
+}
