@@ -1,0 +1,16 @@
+print("enter data")
+x=scan()
+y=scan()
+print("enter level of significance")
+alpha=scan()
+d=x-y
+n=length(d)
+db=sum(d)/n
+std=sqrt((sum((d-db)^2))/(n-1))
+print(db)
+print(std)
+t<-t.test(x,y,paired=TRUE)
+print(t)
+print("table value for two-tailed test:")
+tablevalue<-qt(1-alpha/2, df=n-1)
+print(round(tablevalue,digits=4))
