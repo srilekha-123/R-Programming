@@ -1,0 +1,5 @@
+print("enter data")
+x=scan()
+y=scan()
+t<-wilcox.test(x,y,alternative="two.sided")
+print(t)
