@@ -1,0 +1,32 @@
+print("enter data")
+x<-scan()
+y<-scan()
+print("enter the level of significance")
+alpha<-scan()
+n1<-length(x)
+n2<-length(y)
+xb<-mean(x)
+yb<-mean(y)
+print(xb)
+print(yb)
+sdx<-sqrt((sum((x-xb)^2))/(n1-1))
+print(sdx)
+sdy<-sqrt((sum((y-yb)^2))/(n2-1))
+print(sdy)
+if (sdx>sdy){
+  fvalue<-(sdx^2)/(sdy^2)
+} else{
+  fvalue<-(sdy^2)/(sdx^2)
+}
+print("f value using program")
+print(fvalue)
+f<-var.test(x,y)
+print("f value using built in ")
+print(f)
+print("table value for two-tailed test:")
+if (sdx>sdy){
+  ftab<-qf(1-alpha,n1-1,n2-1)
+}else{
+  ftab<-qf(1-alpha,n2-1,n1-1)
+}
+print(round(ftab,digits=3))
