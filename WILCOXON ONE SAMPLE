@@ -1,0 +1,7 @@
+print("enter data")
+x<-scan()
+print("enter mu value")
+a=scan()
+t<-wilcox.test(x,mu=a,alternative="two.sided")
+print(t)
+#p value greater than level of significance than accept Ho
