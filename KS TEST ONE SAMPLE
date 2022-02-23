@@ -1,0 +1,4 @@
+print("enter data")
+x<-scan()
+t<-ks.test(x,"punif")
+print(t)
