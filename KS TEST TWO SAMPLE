@@ -1,0 +1,12 @@
+print("enter data")
+x=scan()
+y=scan()
+ls=scan()
+t<-ks.test(x,y,paired=T)
+print(t)
+#p value greater than level of significance than accept Ho
+if(t$p.value>ls){
+  print("accept Ho")
+}else{
+  print("reject Ho")
+}
