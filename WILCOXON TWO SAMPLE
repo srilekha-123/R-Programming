@@ -1,10 +1,10 @@
 print("enter data")
 x=scan()
 y=scan()
-t<-wilcox.test(x,y,paired=TRUE,alternative="two.sided")
-print(t)
 print("enter level of significance")
 ls=scan()
+t<-wilcox.test(x,y,paired=TRUE,alternative="two.sided")
+print(t)
 #p value greater than level of significance than accept Ho
 if(t$p.value>ls){
   print("accept Ho")
